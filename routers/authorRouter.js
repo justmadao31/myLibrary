@@ -9,6 +9,7 @@ router.post('/methods/author/getAuthorList',(request, response)=> {
     db.query('select * from author', function(err, rows, fields){
         if (err) {
             console.log(err);
+            response.send(JSON.stringify({result:null}))
             return;
         }
         var result={result:rows};
