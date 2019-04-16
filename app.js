@@ -1,4 +1,4 @@
-const authorRouter=require('./src/routers/authorRouter');
+const authorRouter=require('./routers/authorRouter');
 const express =require('express');
 const app=express();
 const bodyParser=require('body-parser');
@@ -11,4 +11,4 @@ app.use(authorRouter);
 
 app.listen(3000,function () {
     console.log('app running')
-})
+});
