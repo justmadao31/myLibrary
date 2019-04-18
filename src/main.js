@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import App from './App.vue'
-import VueRouter from 'vue-router'
 
 //bootstrapVue
 import BootstrapVue from 'bootstrap-vue'
@@ -8,21 +7,31 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue);
 
-
+//axios
 import axios from 'axios';
 Vue.prototype.$axios=axios;
 Vue.config.productionTip = false;
 
-Vue.use(VueRouter);
+import moment from 'moment';
 
+//引入主要组件
 import authorList from './pages/author/authorList'
 import worksList from './pages/works/wroksList'
 
+//引入路由
+import VueRouter from 'vue-router'
+Vue.use(VueRouter);
+//创建路由
 var router=new VueRouter({
   routes:[
+    {path:'/',component:authorList},
     {path:'/authorList',component:authorList},
     {path:'/worksList',component:worksList}
   ]
+})
+
+Vue.filter('dateFormate',function (data) {
+  return moment(data).format('YYYY-MM-DD')
 })
 
 new Vue({

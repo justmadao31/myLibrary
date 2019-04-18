@@ -2,10 +2,10 @@ var db    = {};
 var mysql = require('mysql');
 var pool  = mysql.createPool({
     connectionLimit : 10,
-    host            : 'localhost',
+    host            : '127.0.0.1',
     user            : 'root',
     password        : '123456',
-    database        : 'test'
+    database        : 'zq_test'
 });
 
 db.query = function(sql, callback){

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <navbar></navbar>
-    <router-view></router-view>
+    <b-container>
+      <router-view></router-view>
+    </b-container>
   </div>
 </template>
 
@@ -17,5 +19,8 @@ export default {
 </script>
 
 <style>
-
+#app{
+background: url("./img/megumi.png") no-repeat;
+  background-size:125% auto;
+}
 </style>
