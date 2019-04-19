@@ -12,7 +12,7 @@ router.post('/methods/author/getAuthorList',(req, res)=> {
     db.query(sql, function(err, rows, fields){
         if (err) {
             console.log(err);
-            res.send(JSON.stringify({result:null,status:0,session:req.session}));
+            res.send(JSON.stringify({result:null,status:0}));
             return;
         }
         var result={result:rows,status:1};
