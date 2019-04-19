@@ -17,6 +17,7 @@ import moment from 'moment';
 //引入主要组件
 import authorList from './pages/author/authorList'
 import worksList from './pages/works/wroksList'
+import login from './pages/login'
 
 //引入路由
 import VueRouter from 'vue-router'
@@ -25,14 +26,15 @@ Vue.use(VueRouter);
 var router=new VueRouter({
   routes:[
     {path:'/',component:authorList},
+    {path:'/login',component:login},
     {path:'/authorList',component:authorList},
     {path:'/worksList',component:worksList}
   ]
-})
+});
 
 Vue.filter('dateFormate',function (data) {
   return moment(data).format('YYYY-MM-DD')
-})
+});
 
 new Vue({
   render: h => h(App),

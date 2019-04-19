@@ -4,20 +4,19 @@ const router=express.Router();
 
 const db=require('../mysql');
 
-router.post('/methods/author/getAuthorList',(request, response)=> {
-
+router.post('/methods/author/getAuthorList',(req, res)=> {
     var sql='select * from author where 1=1 ';
 
-    if (request.body.name != '') sql+="and name like '%"+request.body.name+"%'"
+    if (req.body.name != '') sql+="and name like '%"+req.body.name+"%'";
 
     db.query(sql, function(err, rows, fields){
         if (err) {
             console.log(err);
-            response.send(JSON.stringify({result:null,status:0}));
+            res.send(JSON.stringify({result:null,status:0,session:req.session}));
             return;
         }
         var result={result:rows,status:1};
-        response.send(JSON.stringify(result))
+        res.send(JSON.stringify(result))
     });
 
 

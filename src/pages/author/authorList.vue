@@ -149,7 +149,7 @@
     #authorList{
         background-color: #f9f9f9;
         opacity: 0.95;
-        min-height: 1440px;
+        min-height: 1400px;
     }
     button{
         margin-right: 10px;
