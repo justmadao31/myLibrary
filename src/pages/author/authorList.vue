@@ -149,7 +149,8 @@
     #authorList{
         background-color: #f9f9f9;
         opacity: 0.95;
-        min-height: 1400px;
+        min-height: 1340px;
+        overflow-y: auto;
     }
     button{
         margin-right: 10px;

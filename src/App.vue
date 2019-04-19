@@ -19,13 +19,9 @@
 </script>
 
 <style>
-    body {
-        background: url("./img/megumi.png");
-        background-size: auto 100%;
-        padding: 0;
-        height: 100%;
-    }
-    .container{
-        min-height: 1400px;
+    #app {
+        background: url("./img/megumi.png")no-repeat;
+        background-size: 2200px 1400px;
+        height: 1400px;
     }
 </style>
