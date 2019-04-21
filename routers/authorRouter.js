@@ -9,7 +9,7 @@ router.post('/methods/author/getAuthorList',(req, res)=> {
 
     if (req.body.name != '') sql+="and name like '%"+req.body.name+"%'";
 
-    db.query(sql, function(err, rows, fields){
+    db.query(sql,[], function(err, rows, fields){
         if (err) {
             console.log(err);
             res.send(JSON.stringify({result:null,status:0}));
@@ -31,7 +31,7 @@ router.post('/methods/author/saveAuthor',(req,res)=>{
     }
     console.log(sql);
 
-    db.query(sql, function(err, rows, fields){
+    db.query(sql, [],function(err, rows, fields){
         if (err) {
             console.log(err);
             res.send(JSON.stringify({result:null,status:0}));

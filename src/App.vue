@@ -20,7 +20,8 @@
 
 <style>
     #app {
-        background: url("./img/megumi.png")no-repeat;
+        background: url("../img/megumi.png")no-repeat;
+        background-position:center top;
         background-size: 2200px 1400px;
         height: 1400px;
     }

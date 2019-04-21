@@ -36,6 +36,9 @@ app.post('/methods/login', function (req, res) {
 const authorRouter = require('./routers/authorRouter');
 app.use(authorRouter);
 
+const workRouter = require('./routers/workRouter');
+app.use(workRouter);
+
 app.listen(3000, function () {
     console.log('app running')
 });

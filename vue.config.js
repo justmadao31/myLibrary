@@ -1,6 +1,5 @@
 module.exports = {
     lintOnSave: true,
-    publicPath:'./',
     devServer: {
         proxy: {
             '/methods': {
